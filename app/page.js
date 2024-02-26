@@ -1,15 +1,24 @@
 async function fetchUsers() {
   const res = await fetch("https://reqres.in/api/users")
   const data = await res.json()
-  console.log(data);
+  return data.data
 }
 
 async function HomePage() {
 
-  await fetchUsers()
+  const users = await fetchUsers()
 
   return (
-    <div>HomePage</div>
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>
+          <div>
+            <h4>{user.id} {user.first_name} {user.last_name}</h4>
+           <p>email: {user.email}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
   )
 }
 
