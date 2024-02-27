@@ -9,9 +9,9 @@ function Users({ users }) {
           <li
             key={user.id}
             className="bg-slate-500 mb-2 p-4 rounded-md flex justify-between"
-            onClick={() => {
-              alert(user.id);
-            }}
+        //     onClick={() => {
+        //       alert(user.id);
+        //     }}
           >
             <div>
               <h4 className="font-bold">
