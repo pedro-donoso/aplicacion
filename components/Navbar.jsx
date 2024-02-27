@@ -2,12 +2,19 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="bg-slate-300 mb-4 flex justify-between items-center px-20 p-3 font-bold text-black">
-      <Link href="/">Home</Link>
-
-      <ul>
+    <nav>
+      <ul className="bg-slate-300 mb-4 flex justify-around items-center px-20 p-3 font-bold text-black">
+        <li>
+          <Link href="/">Home</Link>
+        </li>
         <li>
           <Link href="/about">About</Link>
+        </li>
+        <li>
+          <Link href="/tienda">Tienda</Link>
+        </li>
+        <li>
+          <Link href="/posts">Posts</Link>
         </li>
       </ul>
     </nav>
